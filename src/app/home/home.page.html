@@ -1,14 +1,54 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Puente Grua
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-grid>
+      <ion-row>
+        <img style="display:block; margin:auto;" src="../../assets/006-flecha-1.png" (click)="up()" >
+      </ion-row>
+      <ion-row>
+        <div style="display: block; margin: auto;">
+          <img src="../../assets/003-chevron-apuntando-a-la-izquierda.png" (click)="left()" >
+          <img src="../../assets/009-detener.png" (click)="stop()"  >
+          <img src="../../assets/001-chevron-derecho.png " (click)="right()" >
+        </div>
+      </ion-row>
+      <ion-row>
+          <img style="display:block; margin:auto;" src="../../assets/002-flecha-de-chevron-hacia-abajo.png" (click)="down()"  >
+      </ion-row>
+      </ion-grid>
+      <ion-grid>
+          <div style="padding-left: 15%;">
+        <ion-row>
+        <ion-col>
+         <h3>Subir Iman</h3>
+         <img src="../../assets/004-militar.png" (click)="upiman()"  >
+        </ion-col>
+        <ion-col>
+          <h3>Bajar Iman</h3>
+          <img src="../../assets/005-flecha.png" (click)="downiman()"  >
+        </ion-col>
+      </ion-row>
+    </div>
+      </ion-grid>
+      <ion-grid>
+          <div style="padding-left: 15%;">
+        <ion-row>
+        <ion-col>
+         <h5>Iman Activado</h5>
+         <img style="height: 90px; width: 90px;" src="../../assets/007-iman.png" (click)="oniman()"  >
+        </ion-col>
+        <ion-col>
+          <h5>Iman Desactivado</h5>
+          <img style="height: 90px; width: 90px;" src="../../assets/008-iman-1.png" (click)="offiman()"   >
+        </ion-col>
+      </ion-row>
+    </div>
+      </ion-grid>
+
 </ion-content>
