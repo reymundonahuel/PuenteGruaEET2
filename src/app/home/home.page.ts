@@ -14,6 +14,20 @@ export class HomePage {
   
   async ngOnInit(){
     this.blue.enable();
+    const conectar = this.blue.connect('98:D3:31:20:A0:2F');
+    if (conectar) {
+      const toastconectar = await this.toast.create({
+        message: 'Conectado',
+        duration: 2000
+      });
+      toastconectar.present();
+    }else{
+      const noconectar = await this.toast.create({
+        message: 'No se ha podido conectar',
+        duration: 2000
+      });
+      noconectar.present();
+    }
     if (this.blue.isEnabled){
       console.log("Bluetooth prendido")
       const toast = await this.toast.create({
@@ -21,7 +35,6 @@ export class HomePage {
         duration: 2000  
       });
       toast.present();
-      this.blue.showBluetoothSettings();
     }else{
       const secondtoast = await this.toast.create({
         message: 'No se ha podido conectar',
